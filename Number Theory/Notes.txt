@@ -1,0 +1,36 @@
+Why we use 10^9 + 7 as mod?
+---------------------------
+
+    =>It should just be large enough to fit in the largest integer data type i.e it makes sure that there is no overflow in the result.
+    =>It should be a prime number because if we take mod of a number by Prime the result is generally spaced i.e. the results are very different results in comparison to mod the number by non-prime, that is why primes are generally used for mod.
+
+10^9+7 fulfills both the criteria. It is the first 10-digit prime number and fits in int data type as well. In fact, any prime number less than 2^30 will be fine in order to prevent possible overflows.
+
+How modulo is used: 
+-------------------
+
+
+A few distributive properties of modulo are as follows: 
+ 
+
+    =>( a + b) % c = ( ( a % c ) + ( b % c ) ) % c
+    =>( a * b) % c = ( ( a % c ) * ( b % c ) ) % c
+    =>( a – b) % c = ( ( a % c ) – ( b % c ) ) % c
+    
+    (a % m + m) % m == > if negative result
+    
+    =>( a / b ) % c = ( ( a % c ) / ( b % c ) ) % c --- > Not Applicable
+    
+    
+Catalan Numbers:
+-----------------
+
+1) The number of valid parenthesis expressions that consist of N right parenthesis and N left parethesis
+2) No of different ways (N+1) factors can be completely parenthesised.
+3) A rooted binary tree with one root node, where each npde has either 0 or 2 branches descending from it.How many rooted binary trees are there with N internal nodes.
+4) Count of structurally unique BSTs with K-keys is Cn.
+5) Count no of ways to divide a circle using N non-intersecting chords
+6) No. of ways to reach from bottom left to top right without crossing the main diagonal and always pointing to right or top.
+7) All possible binary trees with given inorder treversal
+    
+    
