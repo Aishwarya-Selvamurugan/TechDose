@@ -58,3 +58,10 @@ public class Main
 	    }
 	}
 }
+
+// Time Complexity:
+// ----------------
+	
+// BC : O(NlogN)
+// WC : O(NlogN)
+// AC : O(NlogN)	
