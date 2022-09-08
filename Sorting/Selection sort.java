@@ -35,4 +35,3 @@ public class Main
 
 // BC : O(N^2)
 // WC : O(N^2)	
-// Does not depend on the input.
