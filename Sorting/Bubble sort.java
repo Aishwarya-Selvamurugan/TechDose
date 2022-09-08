@@ -33,3 +33,10 @@ public class Main
 		}
 	}
 }
+
+// Time Complexity
+// ---------------
+
+// BC : O(N) ==> Already sorted Array
+// WC : O(N^2) ==> reversely sorted Array
+// AC : O(N^2) ==> arranged randomly
