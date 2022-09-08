@@ -12,7 +12,7 @@ public class Main
 		for(int i=0;i<n-1;i++)
 		{
 		    int Index = i;
-		    for(int j=i+1;j<n-1;j++)
+		    for(int j=i+1;j<n;j++)
 		    {
 		        if(a[Index] > a[j])
 		        {
