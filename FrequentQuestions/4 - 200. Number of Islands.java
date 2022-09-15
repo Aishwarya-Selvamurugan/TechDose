@@ -1,38 +1,43 @@
 class Solution {
     public int numIslands(char[][] grid) {
-        int m = grid.length;
-        int n = grid[0].length;
+        int r = grid.length;
+        int c = grid[0].length;
         int count = 0;
-        for(int i=0;i<m;i++)
+        for(int i=0;i<r;i++)
         {
-            for(int j=0;j<n;j++)
+            for(int j=0;j<c;j++)
             {
-                if(grid[i][j] =='1')
-                {
-                    island(grid,i,j);
-                    count++;
+                if(grid[i][j] == '1'){
+                islands(grid,i,j);
+                count++;
                 }
             }
         }
         return count;
     }
-    public static void island(char[][] grid,int i,int j)
+    public static void islands(char[][] grid,int i,int j)
     {
-        int m = grid.length;
-        int n = grid[0].length;
         if(grid[i][j] == '1')
         {
-        grid[i][j] = '0';
-        if(i+1 < m)
+            grid[i][j] = '0';
+            int r = grid.length;
+        int c = grid[0].length;
+        if(j+1 < c)
         {
-        island(grid,i+1,j);
+            islands(grid,i,j+1);
+        }
+        if(i+1 < r)
+        {
+            islands(grid,i+1,j);
         }
         if(j-1 >= 0)
-        island(grid,i,j-1);
-        if(j+1 < n)
-        island(grid,i,j+1);
+        {
+            islands(grid,i,j-1);
+        }
         if(i-1 >= 0)
-        island(grid,i-1,j);
+        {
+            islands(grid,i-1,j);
+        }
         }
     }
 }
