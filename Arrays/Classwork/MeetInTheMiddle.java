@@ -4,8 +4,8 @@ public class Main
 	public static void main(String[] args) {
 		int nums[] = {5,3,-1,7};
 		int n = nums.length;
-        List<Integer> s = generate(nums,0,n/2);
-        List<Integer> e = generate(nums,n/2,n);
+        List<Integer> s = generate(nums,0,n/2-1);
+        List<Integer> e = generate(nums,n/2,n-1);
         
         Collections.sort(e);
         // for(int i=0;i<s.size();i++)
@@ -45,27 +45,26 @@ public class Main
     }
     public static List<Integer> generate(int nums[],int a,int b)
     {
-        int size = (int)Math.pow(2,nums.length/2);
+        int size = b-a+1;
         List<Integer> l = new ArrayList<>();
-        int diff = 0;
-        if(a!=0)
-        {
-            diff = nums.length/2;
-        }
-        for(int i=0;i<size;i++)
-        {
-            int sum = 0;
-            int mask = 1;
-            for(int I=0;I<nums.length;I++)
-            {
-                if((mask&i)>0)
-                {
-                    sum+=nums[I+diff];
-                }
-                mask<<=1;
-            }
-            l.add(sum);
-        }
+	int arr[] = new int[size];
+	int k = 0;
+	for(int i=a;i<=b;i++)
+	{
+		arr[k++] = nums[i];
+	}
+        for(int i=0;i<(1<<size);i++)
+	{
+		int sum = 0;
+		for(int j=0;j<size;j++)
+		{
+			if((i&(1<<j))>0)
+			{
+				sum+=arr[j];
+			}
+		}
+		l.add(sum);
+	}
         return l;
     }
 }
