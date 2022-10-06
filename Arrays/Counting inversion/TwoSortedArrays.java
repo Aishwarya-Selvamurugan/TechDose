@@ -12,7 +12,7 @@ public class Main
 		    {
 		        j++;
 		    }
-		    res+=(j-a.length);
+		    res+=(j);
 		}
 		System.out.println(res);
 	}
