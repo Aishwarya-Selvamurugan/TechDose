@@ -1,4 +1,4 @@
-class GfG{
+class Main{
  
    public long multiplyTwoLists(Node l1,Node l2){
         
