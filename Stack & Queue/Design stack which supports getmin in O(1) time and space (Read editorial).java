@@ -1,6 +1,6 @@
 class MinStack {
-    Stack<Integer> s = new Stack<>();
-    int min = Integer.MAX_VALUE;
+    Stack<Long> s = new Stack<>();
+    long min = Integer.MAX_VALUE;
     public MinStack() {
         
     }
@@ -8,25 +8,23 @@ class MinStack {
     public void push(int val) {
         if(s.isEmpty())
         {
-            min = val;
-            s.push(val);
+            min = (long)val;
+            s.push((long)val);
         }
         else
         {
             if(val < min)
             {
-                s.push(val*2-min);
-                min = val;
+                s.push((long)val*2-min);
+                min = (long)val;
             }
             else
             {
-                s.push(val);
+                s.push((long)val);
             }
         }
     }
     public void pop() {
-        if(s.isEmpty()) System.out.println("Empty");
-      return;
         if(s.peek() < min)
         {
             min = (min*2-s.pop());
@@ -36,16 +34,11 @@ class MinStack {
             s.pop();
         }
     }
-    public void top() {
-      if(s.isEmpty()) System.out.println("Empty");
-      return;
-        int t=  s.peek()<min ? (min):s.peek();
-      System.out.println(t);
+    public int top() {
+        return s.peek()<min ? (int)(min):s.peek().intValue();
     }
     
-    public void getMin() {
-      if(s.isEmpty()) System.out.println("Empty");
-      return;
-      System.out.println(min);
+    public int getMin() {
+        return (int)min;
     }
 }
