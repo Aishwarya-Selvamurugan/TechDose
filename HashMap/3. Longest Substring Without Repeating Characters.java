@@ -21,6 +21,6 @@ class Solution {
                 h[s.charAt(r)]++;
             }
         }
-        return max==0?s.length():max;
+        return max;
     }
 }
