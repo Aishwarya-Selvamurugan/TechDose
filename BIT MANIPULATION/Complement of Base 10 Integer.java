@@ -21,3 +21,20 @@ class Solution {
         return n;
     }
 }
+
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int n = sc.nextInt();
+		int mask = 1;
+		while(mask < n)
+		{
+		    n = n^mask;
+		    mask<<=1;
+		}
+		System.out.println(n);
+	}
+}
