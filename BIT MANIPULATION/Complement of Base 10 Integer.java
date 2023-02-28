@@ -38,3 +38,9 @@ public class Main
 		System.out.println(n);
 	}
 }
+
+        int n = 4;
+        for(int i=0;(n>>i)!=0 ;i++){
+            n = n^(1<<i);
+        }
+        System.out.println(n);
